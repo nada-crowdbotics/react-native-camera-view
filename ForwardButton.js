@@ -1,9 +1,10 @@
-import React from "react";
+import React, {Component} from "react";
 import {View, Image, TouchableWithoutFeedback} from "react-native";
 import IconDown from "./images/collapse-down.png";
 
 export default (
     {
+        icon: Component,
         IconSource = IconDown,
         width = 30,
         height = 30,
@@ -25,7 +26,7 @@ export default (
                     justifyContent: "center",
                     overflow: "hidden"
                 }}>
-                    <Image style={{width: iconSize, height: iconSize}} source={IconSource}/>
+                    {icon ? icon : <Image style={{width: iconSize, height: iconSize}} source={IconSource}/>}   
                 </View>
             </TouchableWithoutFeedback>
         </View>
