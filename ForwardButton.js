@@ -4,7 +4,7 @@ import IconDown from "./images/collapse-down.png";
 
 export default (
     {
-        icon: Component,
+        icon,
         IconSource = IconDown,
         width = 30,
         height = 30,
